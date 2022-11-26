@@ -1,2 +1,3 @@
-# vue
-about learning vue
+#vue - This is about my vue learning process
+
+

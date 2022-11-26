@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <!-- 普通调用方法 -->
+            <button @click="test1">按钮1</button><br><br>
+
+            <!-- PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …} -->
+            <!-- 当不传输数据的时候打印以上事件 -->
+            <button @click="test2">按钮2</button><br><br>
+
+            <!-- $event 固定是事件记录 -->
+            <button @click="test3('abc', $event)">按钮3</button>
+        </div>
+
+        <script>
+            const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'This is Vue!'
+            },
+            methods: {
+                test1(){
+                    console.log("你好！！！！");
+                },
+                test2(event){
+                    console.log(event);
+                    console.log("你好！！！！");
+                },
+                test3(str, event){
+                    console.log(str,event);
+                }
+            }
+        })
+        </script>
+    </body>
+</html>

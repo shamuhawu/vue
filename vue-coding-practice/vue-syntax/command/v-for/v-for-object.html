@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <!-- 只获取value -->
+            <!-- <ul>
+                <li v-for="value in message">{{value}}</li>
+            </ul> -->
+
+            <!-- 获取value和key(value, key) -->
+            <!-- <ul>
+                <li v-for="(value, key) in message">{{key+' '+value}}</li>
+            </ul> -->
+
+            <!-- 获取value和key和index(value, key, index) -->
+            <ul>
+                <li v-for="(value, key, index) in message">{{index+' '+key+' '+value}}</li>
+            </ul>
+
+        </div>
+
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    message: {
+                        name: 'Sam',
+                        age: 25,
+                        school: 'NanKai University'
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

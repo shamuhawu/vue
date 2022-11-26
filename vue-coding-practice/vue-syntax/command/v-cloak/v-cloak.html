@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+    <body>
+        <!-- 用于隐藏尚未完成编译的 DOM 模板 -->
+        <div id="app" v-cloak>
+            {{message}}
+        </div>
+
+        <script>
+            window.setTimeout(() => {
+                new Vue({
+                    el: document.querySelector('#app'),
+                    data: {
+                        message: "This is Sam!"
+                    }
+                })
+            }, 2000)
+        </script>
+    </body>
+</html>

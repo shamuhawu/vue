@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <body> 
+        
+        <div id="app">
+            <!-- <h1 v-bind:style="{key(样式):value(样式值)}">{{message}}</h1> -->
+            <h1 v-bind:style="{font: fontSize + 'px'}">{{message}}</h1>
+            <h1 v-bind:style="getStyle">{{message}}</h1>
+        </div>
+
+        <script>
+            const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'This is Vue!',
+                fontSize: 100
+            },
+            methods: {
+                getStyle: function(){
+                    return {font: this.fontSize + 'px'}
+                }
+            }
+        })
+        </script>
+    </body>
+</html>

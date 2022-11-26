@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <form action="https://www.baidu.com">
+                <input type="submit" value="提交" @click.prevent="submitEvent">
+            </form>
+        </div>
+
+        <script>
+            const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'This is Vue!'
+            },
+            methods: {
+                submitEvent(){
+                    console.log("submitEvent");
+                }
+            }
+        })
+        </script>
+    </body>
+</html>

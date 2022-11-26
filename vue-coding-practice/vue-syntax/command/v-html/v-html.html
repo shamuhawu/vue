@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <!-- Message 被覆盖 -->
+            <h1 v-html="message"></h1>
+        </div>
+
+        <script>
+            const app = new Vue({
+            el: '#app',
+            data: {
+                message: '<a href="http://www.baidu.com" style="text-decoration: none;font: 50px;">百度一下</a>'
+            }
+        })
+        </script>
+    </body>
+</html>

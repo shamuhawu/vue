@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app">
+
+            <h1>{{counter}}</h1>
+            <!-- mustach语法 -->
+            <!-- <button v-on:click="counter++">+</button>
+            <button v-on:click="counter--">-</button> -->
+
+
+            <!-- 函数 -->
+            <!-- <button v-on:click="increase()">+</button>
+            <button v-on:click="decrease">-</button> --> //mustach语法不能省略括号{{}}
+
+
+            <!-- 语法糖 -->
+            <button @click="increase()">+</button>
+            <button @click="decrease()">-</button>
+        </div>
+
+        <script>
+            const app = new Vue({
+            el: '#app',
+            data: {
+                counter: 0
+            },
+            methods: {
+                increase(){//方法增强语法
+                    return this.counter++;
+                },
+                decrease(){
+                    return this.counter--;
+                }
+            }
+        })
+        </script>
+    </body>
+</html>

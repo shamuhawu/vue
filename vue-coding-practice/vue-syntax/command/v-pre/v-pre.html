@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <body>
+        <!-- v-pre: 跳过该元素及其所有子元素的编译。 -->
+        <div id="app" v-pre>
+            {{message}}
+        </div>
+
+        <!-- <div id="app">
+            {{message}}
+        </div> -->
+
+
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'This is Vue!'
+                },
+                methods: {
+                    
+                }
+            })
+        </script>
+    </body>
+</html>

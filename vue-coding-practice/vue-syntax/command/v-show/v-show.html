@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <!-- 直接不显示 -->
+            <h1 v-if="isShowCom">{{message}}</h1>
+            <!-- 只改变行内样式: display: none; -->
+            <h1 v-show="isShowCom">{{message}}</h1>
+        </div>
+
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'This is Vue!',
+                    flag: true
+                },
+                methods: {
+                    isShow(){
+                        return this.flag;
+                    }
+                },
+                computed: {
+                    isShowCom(){
+                        return this.flag;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

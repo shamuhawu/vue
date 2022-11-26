@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="../../../vue.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- 虚拟dom的key属性 -->
+            <span v-if="flag">
+                <label for="userPhone">用户电话: </label>
+                <input type="text" placeholder="用户电话" key="phone">
+            </span>
+            <span v-else="flag">
+                <label for="userEmail">用户邮箱: </label>
+                <input type="text" placeholder="用户邮箱" key="email">
+            </span>
+            <button @click="isShow">切换类型</button>
+        </div>
+
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    message: 'This is Vue!',
+                    flag: true
+                },
+                methods: {
+                    isShow(){
+                        this.flag = !this.flag;
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

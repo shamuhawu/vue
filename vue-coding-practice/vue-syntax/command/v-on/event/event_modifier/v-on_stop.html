@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src='../../../../../vue.js'></script>
+    </head>
+    <body>
+        
+        <div id="app" @click="divbtn">
+            <button @click.stop="btn">按钮</button>
+        </div>
+
+        <script>
+            const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'This is Vue!'
+            },
+            methods: {
+                btn(){
+                    console.log("btn");
+                },
+                divbtn(){
+                    console.log("divbtn");
+                }
+            }
+        })
+        </script>
+    </body>
+</html>
