@@ -38,4 +38,4 @@ vue中的MVVM:
         ViewModel的作用:
             1、数据绑定(Data Bindings)
             2、DOM监听(DOM Listeners)
-
+hello world
